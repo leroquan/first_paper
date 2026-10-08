@@ -1,0 +1,79 @@
+# Lake Geneva configuration
+
+neuchatel: {
+  # Period computation parameters
+  'Lx': 38000,
+
+  # Grid parameters
+  'mitgcm_grid': True,    # True if grid is generated based on the MITgcm grid
+  'mitgcm_grid_folder': /storage/alplakes_test/neuchatel_100m_2025/grid_200m,
+  'coarsening_factor': 2,
+
+  'shoreline_file': None,
+  'bathymetry_file': None,
+
+  'stratification_csv': /storage/alplakes_test/neuchatel_100m_2025/modal_analysis/mean_stratification_2025.csv,
+
+  'modes_file': /storage/alplakes_test/neuchatel_100m_2025/modal_analysis/modes_parameters.csv,
+}
+
+geneva: {
+  # Period computation parameters
+  'Lx': 70000,
+
+  # Grid parameters
+  'mitgcm_grid': True,    # True if grid is generated based on the MITgcm grid
+  'mitgcm_grid_folder': /storage/alplakes_test/geneva_100m_2025/grid_400m,
+  'coarsening_factor': 4,
+
+  'shoreline_file': None,
+  'bathymetry_file': None,
+
+  'stratification_csv': /storage/alplakes_test/geneva_100m_2025/modal_analysis/mean_profiles_2025_bimonthly.csv,
+  'modes_file': /storage/alplakes_test/geneva_100m_2025/modal_analysis/modes_parameters.csv,
+}
+
+lucerne: {
+  # Period computation parameters
+  'Lx': 30000,
+
+  # Grid parameters
+  'mitgcm_grid': True,    # True if grid is generated based on the MITgcm grid
+  'mitgcm_grid_folder': /storage/alplakes_test/lucerne_100m_2025/grid_200m,
+  'coarsening_factor': 2,
+
+  'shoreline_file': None,
+  'bathymetry_file': None,
+
+  'stratification_csv': /storage/alplakes_test/lucerne_100m_2025/modal_analysis/mean_profiles_2025_bimonthly.csv,
+  'modes_file': /storage/alplakes_test/lucerne_100m_2025/modal_analysis/modes_parameters.csv,
+}
+
+zug: {
+  # Period computation parameters
+  'Lx': 12500,
+
+  # Grid parameters
+  'mitgcm_grid': True,    # True if grid is generated based on the MITgcm grid
+  'mitgcm_grid_folder': /storage/alplakes_test/zug_100m_2025/grid,
+  'coarsening_factor': 1,
+
+  'shoreline_file': None,
+  'bathymetry_file': None,
+
+  'stratification_csv': /storage/alplakes_test/zug_100m_2025/modal_analysis/mean_profiles_2025_bimonthly.csv,
+  'modes_file': /storage/alplakes_test/zug_100m_2025/modal_analysis/modes_parameters.csv,
+}
+
+# In case the grid doesn't come from the MITgcm grid
+manual_grid: {
+  # Rotation parameters
+  'lat0': 46.5,          # Central latitude (degrees) (None if computed from the MITgcm grid)
+  'y0': 0,            # Central latitude y-coordinate (km)
+
+  'mitgcm_grid': False,    # True if grid is generated based on the MITgcm grid
+  'dx': 400,              # Grid spacing in x-direction (m)
+  'dy': 400,              # Grid spacing in y-direction (m)
+  'x_range': (500, 565),  # Domain extent in x (km)
+  'y_range': (117, 155),  # Domain extent in y (km)
+}
